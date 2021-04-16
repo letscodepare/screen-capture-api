@@ -1,0 +1,12 @@
+GET http://localhost:3000/api
+
+
+###
+
+
+POST http://localhost:3000/api/screen-capture
+Content-Type: application/json
+
+{
+  "url": "http://localhost:3000"
+}

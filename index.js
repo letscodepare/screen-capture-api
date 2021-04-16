@@ -1,13 +1,16 @@
-const express = require('express');
+const express = require('express')
+const cors = require('cors')
+const helmet = require("helmet")
+const app = express()
 
-const app = express();
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 
-app.listen(3000, () => {
- console.log("Server running on port 3000");
-});
+app.use(helmet())
+app.use(cors())
 
+const api = require('./routes/api')
 
+app.use('/api', api)
 
-app.get("/url", (req, res, next) => {
- res.json(["Tony","Lisa","Michael","Ginger","Food"]);
-});
+module.exports = app
