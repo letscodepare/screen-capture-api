@@ -10,7 +10,7 @@ async function startServer() {
 
   app.listen(global.port, () => {
     logger.info(`
-    Server listening on port: ${global.port}
+    🚀 Rocket launched on port: ${global.port}
     `);
   }).on('error', err => {
     logger.error(err);
