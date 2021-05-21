@@ -1,12 +1,10 @@
-GET http://localhost:3000/api
-
+GET http://localhost:4000/status
 
 ###
-
-
-POST http://localhost:3000/api/screen-capture
+POST http://localhost:4000/api/screen-capture
 Content-Type: application/json
 
 {
-  "url": "http://localhost:3000"
+  "url": "http://localhost:3000",
+  "test": "sample"
 }
